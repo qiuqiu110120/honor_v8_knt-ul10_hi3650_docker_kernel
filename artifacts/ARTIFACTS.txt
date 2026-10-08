@@ -1,0 +1,7 @@
+crashfix-05 = Docker-capable kernel for Honor V8 KNT-UL10 (HI3650)
+- boot-knt-ul10-docker-crashfix-05-padded.img : flash to `kernel` partition (fastboot flash kernel ...)
+- Image.gz : raw kernel image (4.4.197-eco, 2026-10-07 23:03)
+- config-fixed05 : kernel .config
+- cpuset.c.patched : patch adding cpuset.cpus/cpuset.mems aliases (kernel/cpuset.c)
+- start-docker.sh : device-side Docker startup (mounts cgroup in chroot, runc --no-pivot wrapper, mirror, dockerd)
+See artifacts/README_DOCKER.md for full details.
